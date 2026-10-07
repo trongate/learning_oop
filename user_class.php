@@ -25,6 +25,11 @@ class User {
         return $today;
     }
 
+    /**
+     * Checks to see if a user is old enough.
+     * @param  int    $age The age of the user.
+     * @return bool      The result (true/false)
+     */
     private function old_enough(int $age) :bool {
         if ($age > 17) {
             return true;
