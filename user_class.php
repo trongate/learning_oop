@@ -1,10 +1,10 @@
 <?php
 class User {
 
-    public $first_name = 'John';
-    public $last_name = 'Rambo';
-    public $age = 33;
-    public $email_address = 'john@rambo.com';
+    public string $first_name = 'John';
+    public string $last_name = 'Rambo';
+    public int $age = 33;
+    public string $email_address = 'john@rambo.com';
 
     public function greeting() :void {
         // Are you old enough to be here?
@@ -25,7 +25,7 @@ class User {
         return $today;
     }
 
-    private function old_enough($age) :bool {
+    private function old_enough(int $age) :bool {
         if ($age > 17) {
             return true;
         } else {
