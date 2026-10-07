@@ -1,4 +1,4 @@
 <?php
 include('user_class.php');
 $user_obj = new User;
-$user_obj->greeting();
+echo $user_obj->greeting(); // We are outside the class!

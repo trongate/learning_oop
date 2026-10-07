@@ -6,13 +6,13 @@ class User {
     public $age = 33;
     public $email_address = 'john@rambo.com';
 
-    function greeting() {
+    public function greeting() {
         echo 'Hello '.$this->first_name.'. ';
         $today = $this->get_today();
         echo 'Today is '.$today;
     }
 
-    function get_today() {
+    private function get_today() {
         $today = date('l');
         return $today;
     }
