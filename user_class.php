@@ -6,7 +6,13 @@ class User {
     public int $age = 33;
     public string $email_address = 'john@rambo.com';
 
-    public function greeting() :void {
+    /**
+     * Display a greeting message containing the user's first name and the current day,
+     * provided the user meets the age restriction requirement.
+     *
+     * @return void
+     */
+    public function greeting(): void {
         // Are you old enough to be here?
         $allowed = $this->old_enough($this->age);
 
@@ -20,17 +26,23 @@ class User {
         echo 'Today is '.$today;
     }
 
-    private function get_today() :string {
+    /**
+     * Retrieve the current day of the week.
+     *
+     * @return string Full textual representation of the current day (e.g., Monday through Sunday).
+     */
+    private function get_today(): string {
         $today = date('l');
         return $today;
     }
 
     /**
-     * Checks to see if a user is old enough.
-     * @param  int    $age The age of the user.
-     * @return bool      The result (true/false)
+     * Determine whether a person is old enough based on their age.
+     *
+     * @param int $age The age of the user in years.
+     * @return bool True if the age is greater than 17, false otherwise.
      */
-    private function old_enough(int $age) :bool {
+    private function old_enough(int $age): bool {
         if ($age > 17) {
             return true;
         } else {
