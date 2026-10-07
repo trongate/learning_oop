@@ -6,8 +6,15 @@ class User {
     public $age = 33;
     public $email_address = 'john@rambo.com';
 
-    function greeting($first_name) {
-        echo 'Hello '.$first_name;
+    function greeting() {
+        echo 'Hello '.$this->first_name.'. ';
+        $today = $this->get_today();
+        echo 'Today is '.$today;
+    }
+
+    function get_today() {
+        $today = date('l');
+        return $today;
     }
 
 }
