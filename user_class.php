@@ -50,4 +50,8 @@ class User {
         }
     }
 
+    protected function say_my_name() {
+        echo 'Hello '.$this->first_name.' '.$this->last_name;
+    }
+
 }
